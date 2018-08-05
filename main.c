@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static long int g_last = 0;
+static int g_last = 0;
 unsigned int my_rand()
 {
     g_last = (48271 * g_last) % 0x7fffffff;
@@ -15,9 +15,9 @@ unsigned int my_rand()
 
 long int PMrand()
 {
-	long int hi = g_last / q;
-	long int lo = g_last % q;
-	long int test = a * lo - r * hi;
+	int hi = g_last / q;
+	int lo = g_last % q;
+	int test = a * lo - r * hi;
 	if(test > 0)
 		g_last = test;
 	else	g_last = test + m;
@@ -41,8 +41,8 @@ int main(int argc, char *argv[])
     g_last = seed;
     
     for(int i = 0; i < num; i++){
-        long int x = PMrand();
-        long int val = x / ((0x7fffffff+1)/max)+1;
+        int x = PMrand();
+        int val = x / (int)((unsigned int)(0x7fffffff+1)/max)+1;
 	printf("%d\n", val);
     }
     
