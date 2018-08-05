@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
     
     for(int i = 0; i < num; i++){
         long int x = PMrand();
-        long int val = x / (0x7fffffff/max)+1;
+        long int val = x / ((0x7fffffff+1)/max)+1;
 	printf("%d\n", val);
     }
     
