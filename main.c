@@ -38,10 +38,13 @@ int main(int argc, char *argv[])
     max  = load_data();
     num  = load_data();
     
+printf("%d %d %d\n", seed, max, num);
+	return 0;
+	
     g_last = seed;
     
     for(int i = 0; i < num; i++){
-        unsigned int x = my_rand();
+        unsigned int x = PMrand();
         unsigned int val = x / (0x7ffffffe/max + 1)+1;
         printf("%u\n", val);
     }
