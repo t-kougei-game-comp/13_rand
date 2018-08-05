@@ -45,7 +45,7 @@ printf("%d %d %d\n", seed, max, num);
     
     for(int i = 0; i < num; i++){
         unsigned int x = PMrand();
-        unsigned int val = x / (0x7ffffffe/max + 1)+1;
+        unsigned int val = x / (0x7fffffff/max + 1)+1;
         printf("%u\n", val);
     }
     
