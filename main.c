@@ -4,26 +4,8 @@
 static unsigned long g_last = 0;
 unsigned int my_rand()
 {
-    g_last = (48271 * g_last) % 0xffffffff;
+    g_last = (48271 * g_last) % 0x7fffffff;
     return g_last;
-}
-
-#define a 48271
-#define m 2147483647
-#define q (m / a)
-#define r (m % a)
-
-static long int seed = 1;
-
-long int PMrand()
-{
-	long int hi = seed / q;
-	long int lo = seed % q;
-	long int test = a * lo - r * hi;
-	if(test > 0)
-		seed = test;
-	else	seed = test + m;
-	return seed;
 }
 
 int load_data()
