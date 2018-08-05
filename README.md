@@ -16,7 +16,7 @@
 
 # テスト結果
 
-[![Build Status](https://travis-ci.org/t-kougei-game-comp/rand.svg?branch=master)](https://travis-ci.org/t-kougei-game-comp/rand)
+[![Build Status](https://travis-ci.org/t-kougei-game-comp/13_rand.svg?branch=develop)](https://travis-ci.org/t-kougei-game-comp/13_rand)
 
 # 今回の問題
 
