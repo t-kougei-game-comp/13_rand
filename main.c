@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
     
     for(int i = 0; i < num; i++){
         int x = PMrand();
-        int val = x / (int)((unsigned int)(0x7fffffff+1)/max)+1;
+        int val = x / (int)(((unsigned int)0x7fffffff+1)/max)+1;
 	printf("%d\n", val);
     }
     
