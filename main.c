@@ -4,7 +4,7 @@
 static int g_last = 0;
 unsigned int my_rand()
 {
-    g_last = (48271 * g_last) % 0x7fffffff;
+    g_last = ((unsigned int)48271 * g_last) % 0x7fffffff;
     return g_last;
 }
 
