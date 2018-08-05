@@ -43,7 +43,6 @@ int main(int argc, char *argv[])
     for(int i = 0; i < num; i++){
         unsigned int x = my_rand();
         unsigned int val = x / (0x7fffffff/max)+1;
-        printf("%u\n", x);
     }
     
     return 0;
