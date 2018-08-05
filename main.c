@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     
     for(int i = 0; i < num; i++){
         int x = my_rand();
-        int val = x / ((double)0x7fffffff/max)+1;
+        int val = x / ((0x7fffffff+max-1)/max)+1;
 	printf("%d\n", val);
     }
     
