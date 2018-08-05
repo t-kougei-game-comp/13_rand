@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
     for(int i = 0; i < num; i++){
         int x = PMrand()-1;
         int val = x / ((double)0x7ffffff/max)+1;
+	printf("%d:", x);
 	printf("%d\n", val);
     }
     
