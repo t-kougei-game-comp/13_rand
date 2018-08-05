@@ -38,9 +38,6 @@ int main(int argc, char *argv[])
     max  = load_data();
     num  = load_data();
     
-printf("%d %d %d\n", seed, max, num);
-	return 0;
-	
     g_last = seed;
     
     for(int i = 0; i < num; i++){
