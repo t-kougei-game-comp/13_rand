@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static unsigned long g_last = 0;
+static long int g_last = 0;
 unsigned int my_rand()
 {
     g_last = (48271 * g_last) % 0x7fffffff;
@@ -9,7 +9,7 @@ unsigned int my_rand()
 }
 
 #define a 48271
-#define m 2147483647
+#define m 0x7fffffff
 #define q (m / a)
 #define r (m % a)
 
